@@ -14,14 +14,15 @@ public static void main(String[] args) {
     String casoteste = "casoteste.txt";
     String casotesteB = "casotesteB.txt";
     String casoteste1M= "Casos1m.txt";
-    String casogrande= "CasosMtgrande.txt";//casos mt grandes estão com formatação E
+    String casogrande= "CasosMtgrande.txt";//casos mt grandes também não estão a funcionar corretamente;
+    //aprincipio eles estouram os limites de inteiros. 
     String casotesteC = "casotesteC.txt"; //caso C não esta funcionando 
     //aprincipio não funciona quando precisa voltar de um JarroB para um jarroA 
     //motivo não tem função para.
 
     // TODO resolver casos que o processamento é diferente dos casos de teste e colocar para todos os casos
 
-    try (BufferedReader br= new BufferedReader(new FileReader(casogrande))) {
+    try (BufferedReader br= new BufferedReader(new FileReader("casosjb\\caso1"))) {
             String line = br.readLine();
             String[] linha = line.split(" ");
             capacidadejarro1 = Double.parseDouble(linha[0]);
