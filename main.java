@@ -7,15 +7,14 @@ import java.util.List;
 public class main{
 public static void main(String[] args) {
     //capacidade dos jarros de shiek sendo no max 40
-    int capacidadejarro1 , capacidadejarro2 , capacidadejarro3;
-    int aguajarro1 , aguajarro2 , aguajarro3;
-    int quantidadeaguadesejada1,quantidadeaguadesejada2,quantidadeaguadesejada3; 
-    int cont = 0;
+    Double capacidadejarro1 , capacidadejarro2 , capacidadejarro3;
+    Double aguajarro1 , aguajarro2 , aguajarro3;
+    Double quantidadeaguadesejada1,quantidadeaguadesejada2,quantidadeaguadesejada3; 
+    Double cont = 0.0;
     String casoteste = "casoteste.txt";
     String casotesteB = "casotesteB.txt";
     String casoteste1M= "Casos1m.txt";
-    String casogrande= "CasosMtgrande.txt";//casos mt grandes também não estão a funcionar corretamente;
-    //aprincipio eles estouram os limites de inteiros. 
+    String casogrande= "CasosMtgrande.txt";//casos mt grandes estão com formatação E
     String casotesteC = "casotesteC.txt"; //caso C não esta funcionando 
     //aprincipio não funciona quando precisa voltar de um JarroB para um jarroA 
     //motivo não tem função para.
@@ -25,23 +24,23 @@ public static void main(String[] args) {
     try (BufferedReader br= new BufferedReader(new FileReader(casogrande))) {
             String line = br.readLine();
             String[] linha = line.split(" ");
-            capacidadejarro1 = Integer.parseInt(linha[0]);
-            capacidadejarro2 = Integer.parseInt(linha[1]);
-            capacidadejarro3 = Integer.parseInt(linha[2]);
+            capacidadejarro1 = Double.parseDouble(linha[0]);
+            capacidadejarro2 = Double.parseDouble(linha[1]);
+            capacidadejarro3 = Double.parseDouble(linha[2]);
             line = br.readLine();
             linha = line.split(" ");
-            aguajarro1 = Integer.parseInt(linha[0]);
-            aguajarro2 = Integer.parseInt(linha[1]);
-            aguajarro3 = Integer.parseInt(linha[2]);
+            aguajarro1 = Double.parseDouble(linha[0]);
+            aguajarro2 = Double.parseDouble(linha[1]);
+            aguajarro3 = Double.parseDouble(linha[2]);
             line = br.readLine();
             linha = line.split(" ");
-            quantidadeaguadesejada1 = Integer.parseInt(linha[0]);
-            quantidadeaguadesejada2 = Integer.parseInt(linha[1]);
-            quantidadeaguadesejada3 = Integer.parseInt(linha[2]);
+            quantidadeaguadesejada1 = Double.parseDouble(linha[0]);
+            quantidadeaguadesejada2 = Double.parseDouble(linha[1]);
+            quantidadeaguadesejada3 = Double.parseDouble(linha[2]);
             //JA
-            int[] jarro1 = new int[3];
-            int[] jarro2 = new int[3];
-            int[] jarro3 = new int[3];
+            double[] jarro1 = new double[3];
+            double[] jarro2 = new double[3];
+            double[] jarro3 = new double[3];
             jarro1[0] = capacidadejarro1;
             jarro1[1] = aguajarro1;
             jarro1[2] = quantidadeaguadesejada1;
